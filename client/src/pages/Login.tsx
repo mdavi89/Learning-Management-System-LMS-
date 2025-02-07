@@ -1,4 +1,4 @@
-import { useState, type FormEvent} from 'react';
+import { useState, type FormEvent, type ChangeEvent} from 'react';
 import "../styling/Login.css"; 
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -12,6 +12,14 @@ const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
   const handleSubmit = async (e : FormEvent) => {
     e.preventDefault();
     console.log(formState);
@@ -45,23 +53,25 @@ const Login = () => {
           <div className="form-group">
             <label>Email</label>
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="login-input"
-              placeholder="Enter your email"
-            />
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
           </div>
 
           <div className="form-group">
             <label>Password</label>
             <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="login-input"
-              placeholder="Enter your password"
-            />
+                  className="form-input"
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
           </div>
 
           <button type="submit" className="login-button">Login</button>
