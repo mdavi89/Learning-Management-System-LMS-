@@ -1,0 +1,102 @@
+/* Muted background gradient with slower animation */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #0a192f, #1e3a8a, #2563eb, #3b82f6);
+    background-size: 250% 250%;
+    animation: gradientMove 60s ease-in-out infinite;
+}
+
+  /* Softened gradient animation */
+    @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+  /* Higher contrast login box */
+.login-box {
+    background: rgba(20, 20, 20, 0.7); /* Darker for contrast */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for separation */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+  /* Title Styling */
+.login-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f1f1f1; /* Brighter text */
+}
+
+  /* Error message */
+.error-message {
+    color: #ff7878;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+  /* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+  /* Form fields */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #e0e0e0; /* Brighter gray */
+    display: block;
+    margin-bottom: 5px;
+}
+
+  /* Input fields with more defined contrast */
+.login-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Stronger border */
+    border-radius: 6px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff; /* Brighter text */
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    transition: 0.3s;
+}
+
+  /* Stronger input focus effect */
+.login-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+  /* Button Styling */
+.login-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+  /* More visible hover effect */
+.login-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
