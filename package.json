@@ -4,6 +4,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "render-build": "npm install && npm run build",
         "build": "vite build",
         "start": "vite preview"
     },
