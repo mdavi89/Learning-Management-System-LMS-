@@ -25,3 +25,46 @@
   flex-grow: 1;
   padding: 20px;
 }
+
+.dashboard {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c7cdd1;
+  box-sizing: border-box;
+  height: 4.5rem;
+  /*margin-left: 250px;*/
+}
+
+.classes {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  display:flex;
+  gap: 50px;
+  /*margin-left: 335px;*/
+}
+
+section.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #c7cdd1;
+  padding: 7px;
+  flex: 0 0 300px;
+  background-color: #44464729;
+  color: grey;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #484eb5;
+  color: #c7cdd1;
+}
+
+img {
+  max-width: 300px;
+  max-height: 200px;
+}
