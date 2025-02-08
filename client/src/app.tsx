@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter, Route, and Routes
 import Navbar from "./components/navbar"; // Import your Navbar component
+import dotenv from "dotenv"
 
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
@@ -19,6 +20,8 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
+dotenv.config();
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
