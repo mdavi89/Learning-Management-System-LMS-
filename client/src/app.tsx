@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter, Route, and Routes
 import Navbar from "./components/navbar"; // Import your Navbar component
-import dotenv from "dotenv"
 
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
@@ -21,11 +20,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-dotenv.config();
-
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: process.env.GRAPHQL_URL || 'http://localhost:3001/graphql',
+  uri: import.meta.env.GRAPHQL_URL || 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
