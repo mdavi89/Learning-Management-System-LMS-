@@ -2,7 +2,7 @@ import { useState, type FormEvent, type ChangeEvent} from 'react';
 import "../styling/Login.css"; 
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { LOGIN_USER } from '../utils/mutations'; // Import the login mutation
 
 import Auth from '../utils/auth';
 
@@ -12,13 +12,13 @@ const Login = () => {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-
     setFormState({
       ...formState,
       [name]: value,
     });
   };
-  const handleSubmit = async (e : FormEvent) => {
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     console.log(formState);
     try {
@@ -26,31 +26,32 @@ const Login = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.login.token);
+      if (data && data.login) {
+        Auth.login(data.login.token);
+      } else {
+        console.error("Invalid credentials");
+      }
     } catch (e) {
       console.error(e);
     }
 
-    setFormState({
-      email: '',
-      password: '',
-    });
+    setFormState({ email: '', password: '' });
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
         <h2 className="login-title">Welcome to LMS</h2>
-        {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
+        {data && data.login ? (
+          <p>
+            Success! You may now head{' '}
+            <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : (
           <form onSubmit={handleSubmit} className="login-form">
-          <div className="form-group">
-            <label>Email</label>
-            <input
+            <div className="form-group">
+              <label>Email</label>
+              <input
                 className="form-input"
                 placeholder="Your email"
                 name="email"
@@ -58,32 +59,33 @@ const Login = () => {
                 value={formState.email}
                 onChange={handleChange}
               />
+            </div>
+
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+            </div>
+
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        )}
+
+        {error && (
+          <div className="my-3 p-3 bg-danger text-white">
+            {error.message}
           </div>
-
-          <div className="form-group">
-            <label>Password</label>
-            <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-          </div>
-
-          <button type="submit" className="login-button">Login</button>
-        </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}        
+        )}        
       </div>
     </div>
   );
 };
 
 export default Login;
+
