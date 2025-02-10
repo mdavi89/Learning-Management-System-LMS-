@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"; // Import Link for routing
 import "../styling/navbar.css"; // Import the CSS file
-
+import Auth from '../utils/auth';
 const Navbar = () => {
   return (
     <div className="container">
@@ -9,7 +9,16 @@ const Navbar = () => {
         <div className="navbar-slim">
           <Link to="/">Dashboard</Link> {/* Use Link instead of <a> */}
           <Link to="/courses">Courses</Link>
-          <Link to="/login">Log In</Link>
+          {/* If you are already loggedIn, just display user */}
+          {Auth.loggedIn() ? (<div> 
+            <p><br /> </p>           
+            <Link to="/account" >Account</Link>
+            <button onClick={Auth.logout} className="signup-button" style={{margin: 30}}>Logout</button>
+            </div>
+           ) :
+          (<Link to="/login">Log In</Link>
+          )}
+          
         </div>
 
         {/* Wide Navbar */}

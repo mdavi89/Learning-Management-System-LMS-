@@ -8,6 +8,7 @@ const Courses = () => <h2>Courses Page</h2>;
 import Login from "./pages/Login";
 import Syllabus from "./pages/syllabus";
 import Signup from "./pages/Signup";
+import Account from "./pages/Account";
 const Lessons = () => <h2>Lessons Page</h2>;
 const Quizzes = () => <h2>Quizzes Page</h2>;
 const Tests = () => <h2>Tests Page</h2>;
@@ -65,6 +66,7 @@ const App = () => {
           <Route path="/tests" element={<Tests />} />
           <Route path="/grades" element={<Grades />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
         </div>
       </div>
