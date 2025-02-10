@@ -74,6 +74,35 @@ const resolvers = {
       // Return the token and the user
       return { token, user };
     },
+    deleteUser: async (_: any, { username }: { username: string }) => {
+      try {
+        const deletedUser = await User.findOneAndDelete({ username });
+        if (!deletedUser) {
+          throw new Error("User not found");
+        }
+        return deletedUser;
+      } catch (err) {
+        console.error("Error deleting User:", err);
+        throw new Error("Error deleting User");
+      }
+    },
+    updateUser: async (_: any, { input }: { input: any }) => {
+      try {
+        // Remove the password field from the input object to prevent updating it
+        const { password, ...updateFields } = input;
+    
+        const updatedUser = await User.findOneAndUpdate(
+          { username: input.username },  // Find user by username
+          { $set: updateFields },         // Only update fields excluding password
+          { new: true, runValidators: true }
+        );
+    
+        return updatedUser;
+      } catch (err) {
+        console.error("Error updating User:", err);
+        throw new Error("Error updating User");
+      }
+    }  
   },
 };
 

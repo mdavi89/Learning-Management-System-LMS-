@@ -1,11 +1,16 @@
 import { FormEvent, useState } from "react";
 import "../styling/Account.css";
 import Auth from '../utils/auth';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
+import { LOGIN_USER, DELETE_USER, UPDATE_USER, GET_USER} from '../utils/mutations';
+
 
 const Account = () => {
 const [login] = useMutation(LOGIN_USER);
+const [deleteUser] = useMutation(DELETE_USER);
+const [updateUser] = useMutation(UPDATE_USER);
+const getUser = useQuery(GET_USER);
+  
   const [userData, setUserData] = useState({
     username: Auth.getProfile().data.username,
     email: Auth.getProfile().data.email,
@@ -36,8 +41,7 @@ const [login] = useMutation(LOGIN_USER);
 
 async function checkPassword() {
     const submission = {
-        email: userData.email,
-        username: userData.username,        
+        email: userData.email,      
         password: reenterPassword,
     };
     try {
@@ -54,37 +58,49 @@ async function checkPassword() {
 }
   const handleSubmit = async (e : FormEvent) => {
     e.preventDefault();
-    checkPassword().then(result  =>{
-        if(result){
-            alert("Account updated");
+        if(true){
+          const input = {
+            username: userData.username,
+            email: userData.email,
+            password: userData.password,
+          };
+          updateUser({ variables: { input } });
+          alert("Account 1updated");
+          
         }
         else{
-            alert("Wrong Account password");
+          checkPassword()          
+          alert("Wrong Account password");
         }
-    }
-    )
-
   };
-
-  const handleDeleteAccount = () => {
-    checkPassword().then(result  =>{
-        if(result){
-            const confirmDelete = window.confirm(
-                "Are you sure you want to delete your account? This action is irreversible!"
-            );
-            if (confirmDelete) {
-                console.log("Account deleted.");
-                alert("Your account has been deleted.");
-            }
-        }
-        else{
-            alert("Passwords do not match");
-        }
+  const handleDeleteAccount = async () => {
+    try {
+      if (!getUser?.data?.me?.username) {
+        console.error("Username not found");
+        return;
+      }
+  
+      const confirmDelete = window.confirm(
+        "Are you sure you want to delete your account? This action is irreversible!"
+      );
+  
+      if (!confirmDelete) return;
+  
+      console.log(`Deleting user: ${getUser.data.me.username}`);
+  
+      const response = await deleteUser({ 
+        variables: { username: getUser.data.me.username } 
+      });
+  
+      console.log("User deleted:", response.data.deleteUser);
+      alert("Your account has been deleted.");
+      
+      Auth.logout(); // Log out after account deletion
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      alert("Error deleting account");
     }
-    )
-
   };
-
 
   return (
     <div className="account-container">
