@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter, Route, and Routes
 import Navbar from "./components/navbar"; // Import your Navbar component
 
+
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
 const Courses = () => <h2>Courses Page</h2>;
@@ -21,8 +22,9 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 // Construct our main GraphQL API endpoint
+
 const httpLink = createHttpLink({
-  uri: 'https://learning-management-system-lms-server.onrender.com//graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header

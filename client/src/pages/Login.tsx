@@ -52,7 +52,7 @@ const Login = () => {
             <div className="form-group">
               <label>Email</label>
               <input
-                className="form-input"
+                className="login-input"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -64,7 +64,7 @@ const Login = () => {
             <div className="form-group">
               <label>Password</label>
               <input
-                className="form-input"
+                className="login-input"
                 placeholder="******"
                 name="password"
                 type="password"
