@@ -74,11 +74,12 @@ const Login = () => {
             </div>
 
             <button type="submit" className="login-button">Login</button>
+            <p style={{color: "white", margin: 20}}> Don't have an account? </p> <Link to="/signup" style={{color: "white"}}>Sign Up Here!</Link>
           </form>
         )}
 
         {error && (
-          <div className="my-3 p-3 bg-danger text-white">
+          <div className="error-message">
             {error.message}
           </div>
         )}        
