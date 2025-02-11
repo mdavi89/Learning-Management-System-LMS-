@@ -48,7 +48,6 @@ const Navbar = () => {
           <Link to="/grades">Grades</Link>
         </div>
       </div>
-    </div>
   );
 };
 
