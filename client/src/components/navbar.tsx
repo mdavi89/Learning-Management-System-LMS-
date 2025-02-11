@@ -36,7 +36,7 @@ const Navbar = () => {
           (<Link to="/login">Log In</Link>
           )}
         </div>
-
+      </div>
         {/* Wide Navbar */}
         <div className="navbar-wide">
           <Link to="/syllabus">Syllabus</Link>
