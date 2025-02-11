@@ -39,6 +39,23 @@
   .navbar-slim a:hover {
     background-color: #34495e;
   }
+
+    /* Button Styling */
+    .signup-button {
+      background: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    
+    /* More visible hover effect */
+    .signup-button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
   
   /* Second (Wider) Navbar */
   .navbar-wide {
@@ -66,4 +83,27 @@
   .main-content {
     flex: 1;
     padding: 20px;
+  }
+
+  .dropdown {
+    position: relative; /* Position relative for dropdown positioning */
+  }
+  
+  .dropdown-menu {
+    display: block; /* Show dropdown */
+    position: absolute; /* Position it below the Courses link */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Border for the dropdown */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .dropdown-menu a {
+    display: block; /* Make links block elements */
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Link color */
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Change background on hover */
   }

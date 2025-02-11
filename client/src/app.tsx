@@ -1,11 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter, Route, and Routes
 import Navbar from "./components/navbar"; // Import your Navbar component
 
+
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
-const Courses = () => <h2>Courses Page</h2>;
+//const Courses = () => <h2>Courses Page</h2>;
+import JavascriptClass from "./pages/javascriptClass";
+import PythonClass from "./pages/pythonClass";
+import TypescriptClass from "./pages/typescriptClass";
 import Login from "./pages/Login";
 import Syllabus from "./pages/syllabus";
+import Signup from "./pages/Signup";
+import Account from "./pages/Account";
 const Lessons = () => <h2>Lessons Page</h2>;
 const Quizzes = () => <h2>Quizzes Page</h2>;
 const Tests = () => <h2>Tests Page</h2>;
@@ -20,9 +26,12 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+
+
 // Construct our main GraphQL API endpoint
+
 const httpLink = createHttpLink({
-  uri: 'https://learning-management-system-lms-server.onrender.com/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -54,13 +63,17 @@ const App = () => {
         <div className="router-container">
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/javascriptClass" element={<JavascriptClass />} />
+          <Route path="/typescriptClass" element={<TypescriptClass />} />
+          <Route path="/pythonClass" element={<PythonClass />} />
           <Route path="/login" element={<Login />} />
           <Route path="/syllabus" element={<Syllabus />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/grades" element={<Grades />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
         </div>
       </div>
