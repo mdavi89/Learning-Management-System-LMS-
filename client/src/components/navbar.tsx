@@ -26,6 +26,7 @@ const Navbar = () => {
                 <Link to="/pythonClass">Python</Link>
               </div>
             )}
+            </div>
           {/* If you are already loggedIn, just display user */}
           {Auth.loggedIn() ? (<div> 
             <p><br /> </p>           
