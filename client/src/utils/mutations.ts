@@ -22,5 +22,38 @@ export const ADD_USER = gql`
 }
 `;
 
+export const DELETE_USER = gql`
+  mutation deleteUser($username: String!) {
+    deleteUser(username: $username) {
+      _id
+      username
+      email
+      password
+    }
+  }
+`;
+
+export const UPDATE_USER = gql`
+  mutation updateUser($input: UserInput!) {
+  updateUser(input: $input) {
+    _id
+    username
+    email
+    password
+		}
+}
+`;
+
+export const GET_USER = gql`
+  query me {
+  me {
+    _id
+    username
+    email
+    password
+		}
+}
+`;
+
 
 

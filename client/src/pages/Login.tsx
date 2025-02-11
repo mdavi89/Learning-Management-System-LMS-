@@ -52,7 +52,7 @@ const Login = () => {
             <div className="form-group">
               <label>Email</label>
               <input
-                className="form-input"
+                className="login-input"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -64,7 +64,7 @@ const Login = () => {
             <div className="form-group">
               <label>Password</label>
               <input
-                className="form-input"
+                className="login-input"
                 placeholder="******"
                 name="password"
                 type="password"
@@ -74,11 +74,12 @@ const Login = () => {
             </div>
 
             <button type="submit" className="login-button">Login</button>
+            <p style={{color: "white", margin: 20}}> Don't have an account? </p> <Link to="/signup" style={{color: "white"}}>Sign Up Here!</Link>
           </form>
         )}
 
         {error && (
-          <div className="my-3 p-3 bg-danger text-white">
+          <div className="error-message">
             {error.message}
           </div>
         )}        
