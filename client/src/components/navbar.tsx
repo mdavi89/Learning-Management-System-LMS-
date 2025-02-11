@@ -50,7 +50,6 @@ const Navbar = () => {
         </div>)
         : (<p></p>)}
         </div>
-      </div>
   );
 };
 
