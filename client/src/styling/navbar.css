@@ -85,4 +85,25 @@
     padding: 20px;
   }
 
-
+  .dropdown {
+    position: relative; /* Position relative for dropdown positioning */
+  }
+  
+  .dropdown-menu {
+    display: block; /* Show dropdown */
+    position: absolute; /* Position it below the Courses link */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Border for the dropdown */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .dropdown-menu a {
+    display: block; /* Make links block elements */
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Link color */
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+  }
