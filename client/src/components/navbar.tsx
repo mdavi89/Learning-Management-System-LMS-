@@ -41,12 +41,14 @@ const Navbar = () => {
         </div>
       </div>
         {/* Wide Navbar */}
-        <div className="navbar-wide">
+         {Auth.loggedIn() ? (<div className="navbar-wide">
           <Link to="/syllabus">Syllabus</Link>
           <Link to="/lessons">Lessons</Link>
           <Link to="/quizzes">Quizzes</Link>
           <Link to="/tests">Tests</Link>
           <Link to="/grades">Grades</Link>
+        </div>)
+        : (<p></p>)}
         </div>
       </div>
   );
