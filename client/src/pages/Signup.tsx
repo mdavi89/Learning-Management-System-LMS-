@@ -1,5 +1,5 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
-import "../styling/SignUp.css";
+import "../styling/Signup.css";
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 

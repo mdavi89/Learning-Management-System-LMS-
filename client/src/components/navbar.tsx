@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Slim Navbar */}
         <div className="navbar-slim">
           <Link to="/">Dashboard</Link> {/* Use Link instead of <a> */}
-           <div className="dropdown">
+           <div className="dropdown">           
             <Link to="/courses" onClick={toggleDropdown}>Courses</Link> {/* Toggle dropdown on click */}
             {isDropdownOpen && (
               <div className="dropdown-menu">
@@ -25,15 +25,17 @@ const Navbar = () => {
                 <Link to="/typescriptClass">TypeScript</Link>
                 <Link to="/pythonClass">Python</Link>
               </div>
+              
             )}
+            </div>
           {/* If you are already loggedIn, just display user */}
           {Auth.loggedIn() ? (<div> 
-            <p><br /> </p>           
+            <p><br></br><br /> </p>           
             <Link to="/account" >Account</Link>
             <button onClick={Auth.logout} className="signup-button" style={{margin: 30}}>Logout</button>
             </div>
            ) :
-          (<Link to="/login">Log In</Link>
+          (<div> <p><br></br><br /> </p> <Link to="/login">Log In</Link> </div>
           )}
         </div>
       </div>
@@ -46,7 +48,6 @@ const Navbar = () => {
           <Link to="/grades">Grades</Link>
         </div>
       </div>
-    </div>
   );
 };
 
