@@ -7,7 +7,7 @@ export default defineConfig({
     open: true,
     proxy: {
    '/graphql': {
-        target: 'https://learning-management-system-lms-2-snrp.onrender.com',
+        target: 'https://learning-management-system-lms-server2.onrender.com',
         changeOrigin: true,
         secure: false,
       },
