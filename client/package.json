@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
     "@apollo/client": "^3.7.14",
+    "dotenv": "^16.4.5",
     "graphql": "^16.6.0",
     "jwt-decode": "^4.0.0",
+    "mongoose": "^8.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.5"
@@ -35,4 +36,3 @@
   },
   "proxy": "http://localhost:3001"
 }
-

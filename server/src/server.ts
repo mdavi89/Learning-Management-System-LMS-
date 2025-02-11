@@ -1,19 +1,12 @@
 import express from 'express';
 import path from 'node:path';
-import cors from 'cors';
 import type { Request, Response } from 'express';
 import db from './config/connection.js'
 import { ApolloServer } from '@apollo/server';// Note: Import from @apollo/server-express
 import { expressMiddleware } from '@apollo/server/express4';
 import { typeDefs, resolvers } from './schemas/index.js';
 import { authenticateToken } from './utils/auth.js';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-
+import cors from 'cors'; 
 
 const server = new ApolloServer({
   typeDefs,
@@ -27,10 +20,7 @@ const startApolloServer = async () => {
   const PORT = process.env.PORT || 3001;
   const app = express();
 
-  app.use(cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:3000',
-    credentials: true
-  }));
+  app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 

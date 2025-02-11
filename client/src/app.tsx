@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter, Route, and Routes
 import Navbar from "./components/navbar"; // Import your Navbar component
 
+
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
 //const Courses = () => <h2>Courses Page</h2>;
@@ -9,6 +10,8 @@ import PythonClass from "./pages/pythonClass";
 import TypescriptClass from "./pages/typescriptClass";
 import Login from "./pages/Login";
 import Syllabus from "./pages/syllabus";
+import Signup from "./pages/Signup";
+import Account from "./pages/Account";
 const Lessons = () => <h2>Lessons Page</h2>;
 const Quizzes = () => <h2>Quizzes Page</h2>;
 const Tests = () => <h2>Tests Page</h2>;
@@ -26,8 +29,9 @@ import { setContext } from '@apollo/client/link/context';
 
 
 // Construct our main GraphQL API endpoint
+
 const httpLink = createHttpLink({
-  uri: 'https://learning-management-system-lms-server-gw7c.onrender.com/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -68,6 +72,8 @@ const App = () => {
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/grades" element={<Grades />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
         </div>
       </div>

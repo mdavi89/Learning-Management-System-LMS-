@@ -39,6 +39,23 @@
   .navbar-slim a:hover {
     background-color: #34495e;
   }
+
+    /* Button Styling */
+    .signup-button {
+      background: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    
+    /* More visible hover effect */
+    .signup-button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
   
   /* Second (Wider) Navbar */
   .navbar-wide {
@@ -67,6 +84,8 @@
     flex: 1;
     padding: 20px;
   }
+
+
 
   .dropdown {
     position: relative; /* Position relative for dropdown positioning */
