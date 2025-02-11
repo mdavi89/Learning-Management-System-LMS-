@@ -1,69 +1,77 @@
 import React from 'react';
 
 const typescriptClass: React.FC = () => {
+  return (
+    <div>
+      <h1>Fundamentals of TypeScript</h1>
+      <h2>Course Overview</h2>
+      <p>
+        Welcome to the "Fundamentals of TypeScript" course! This course is designed for developers who want to enhance their JavaScript skills by learning TypeScript, a powerful typed superset of JavaScript. Throughout this course, you will gain a solid understanding of TypeScript concepts and how to apply them in your projects.
+      </p>
 
-    return (
-        <div>
-            <h1>TypeScript Fundamentals Course</h1>
-            <br></br>
-            <p>
-            Welcome to the TypeScript Fundamentals Course!
-            <br></br>
-            Course Overview
-            <br></br>
-            In this course, you will learn the essential concepts of TypeScript, the programming language of the web. By the end of this course, you will be able to create dynamic, interactive web pages using JavaScript.
-            <br></br>
-            Course Structure
-            Module 1: Introduction to TypeScript
+      <h2>Course Objectives</h2>
+      <ul>
+        <li>Understand the core concepts of TypeScript and its benefits over JavaScript.</li>
+        <li>Learn how to set up a TypeScript development environment.</li>
+        <li>Utilize TypeScript features such as type annotations, interfaces, and generics.</li>
+        <li>Implement object-oriented programming principles in TypeScript.</li>
+        <li>Work with TypeScript in conjunction with popular frameworks like React.</li>
+      </ul>
 
-            Overview of TypeScript and its role in web development
-            Setting up your development environment
-            Understanding variables and data types
-            Module 2: Control Structures
+      <h2>Course Structure</h2>
+      <p>
+        The course is divided into several modules, each focusing on a specific topic. Here’s a brief outline of the course structure:
+      </p>
+      <ol>
+        <li>
+          <strong>Module 1: Introduction to TypeScript</strong>
+          <p>Learn about TypeScript, its history, and how to set up your development environment.</p>
+        </li>
+        <li>
+          <strong>Module 2: Basic Types and Type Annotations</strong>
+          <p>Understand TypeScript's type system and how to use type annotations.</p>
+        </li>
+        <li>
+          <strong>Module 3: Interfaces and Type Aliases</strong>
+          <p>Explore how to define and use interfaces and type aliases in TypeScript.</p>
+        </li>
+        <li>
+          <strong>Module 4: Functions and Generics</strong>
+          <p>Learn how to create functions with type safety and utilize generics for flexibility.</p>
+        </li>
+        <li>
+          <strong>Module 5: Object-Oriented Programming in TypeScript</strong>
+          <p>Implement classes, inheritance, and encapsulation in TypeScript.</p>
+        </li>
+        <li>
+          <strong>Module 6: TypeScript with React</strong>
+          <p>Integrate TypeScript into React applications for enhanced type safety.</p>
+        </li>
+      </ol>
 
-            Conditional statements (if, else, switch)
-            Loops (for, while, do...while)
-            Functions and scope
-            Module 3: Working with Objects and Arrays
+      <h2>Assignments and Projects</h2>
+      <p>
+        Throughout the course, you will complete various assignments and projects to reinforce your learning. These will include coding exercises, quizzes, and a final project where you will build a TypeScript application.
+      </p>
 
-            Understanding TypeScript objects
-            Array methods and manipulation
-            Introduction to the Document Object Model (DOM)
-            Module 4: Advanced Topics
+      <h2>Resources</h2>
+      <p>
+        You will have access to a variety of resources, including:
+      </p>
+      <ul>
+        <li>Online documentation and tutorials</li>
+        <li>Sample code and exercises</li>
+        <li>Discussion forums for peer support</li>
+      </ul>
 
-            Asynchronous TypeScript (Promises, async/await)
-            Error handling and debugging
-            Introduction to APIs and AJAX
-    
-            Weekly Schedule
-            Week 1:
-
-            Day 1: Introduction to TypeScript and Variables
-            Day 2: Control Structures
-            Day 3: Functions and Scope
-            Week 2:
-
-            Day 1: Objects and Arrays
-            Day 2: DOM Manipulation
-            Day 3: Event Handling
-            Resources
-            Lecture Notes: Download Lecture Notes
-            Activity Files:
-            Console Log Activity
-            Variable Declaration Activity
-            Additional Readings:
-            TypeScript Guide
-            TypeScript Reference
-            Assignments
-            Weekly Challenge: Create a personal blog application that dynamically renders blog posts and implements a light/dark mode toggle. View Assignment
-            Important Links
-            GitHub Copilot Guide: Access Guide
-            Node.js Installation Guide: Install Node.js
-            Contact
-            For any questions or support, please reach out to your instructor via the course forum or email.
-            </p>
-        </div>
-    );
-}
+      <h2>Contact Information</h2>
+      <p>
+        Instructor: [Instructor Name] <br />
+        Email: [Instructor Email] <br />
+        Office Hours: [Days and Times]
+      </p>
+    </div>
+  );
+};
 
 export default typescriptClass;

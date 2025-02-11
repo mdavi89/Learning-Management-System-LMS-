@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Slim Navbar */}
         <div className="navbar-slim">
           <Link to="/">Dashboard</Link> {/* Use Link instead of <a> */}
-           <div className="dropdown">
+            <div className="dropdown">
             <Link to="/courses" onClick={toggleDropdown}>Courses</Link> {/* Toggle dropdown on click */}
             {isDropdownOpen && (
               <div className="dropdown-menu">

@@ -1,69 +1,77 @@
 import React from 'react';
 
 const javascriptClass: React.FC = () => {
+  return (
+    <div>
+      <h1>Fundamentals of JavaScript</h1>
+      <h2>Course Overview</h2>
+      <p>
+        Welcome to the "Fundamentals of JavaScript" course! This course is designed for beginners who want to learn the basics of JavaScript programming. Throughout this course, you will gain a solid understanding of JavaScript concepts and how to apply them in real-world scenarios.
+      </p>
 
-    return (
-        <div>
-            <h1>JavaScript Fundamentals Course</h1>
-            <br></br>
-            <p>
-            Welcome to the JavaScript Fundamentals Course!
-            <br></br>
-            Course Overview
-            <br></br>
-            In this course, you will learn the essential concepts of JavaScript, the programming language of the web. By the end of this course, you will be able to create dynamic, interactive web pages using JavaScript.
-            <br></br>
-            Course Structure
-            Module 1: Introduction to JavaScript
+      <h2>Course Objectives</h2>
+      <ul>
+        <li>Understand the core concepts of JavaScript programming.</li>
+        <li>Write and debug JavaScript code effectively.</li>
+        <li>Utilize functions, arrays, and objects in JavaScript.</li>
+        <li>Implement control structures such as loops and conditionals.</li>
+        <li>Work with the Document Object Model (DOM) to manipulate web pages.</li>
+      </ul>
 
-            Overview of JavaScript and its role in web development
-            Setting up your development environment
-            Understanding variables and data types
-            Module 2: Control Structures
+      <h2>Course Structure</h2>
+      <p>
+        The course is divided into several modules, each focusing on a specific topic. Here’s a brief outline of the course structure:
+      </p>
+      <ol>
+        <li>
+          <strong>Module 1: Introduction to JavaScript</strong>
+          <p>Learn about JavaScript, its history, and how to set up your development environment.</p>
+        </li>
+        <li>
+          <strong>Module 2: Variables and Data Types</strong>
+          <p>Understand variables, data types, and how to work with them in JavaScript.</p>
+        </li>
+        <li>
+          <strong>Module 3: Control Structures</strong>
+          <p>Explore conditionals, loops, and how to control the flow of your code.</p>
+        </li>
+        <li>
+          <strong>Module 4: Functions</strong>
+          <p>Learn how to define and invoke functions, and understand the concept of scope.</p>
+        </li>
+        <li>
+          <strong>Module 5: Arrays and Objects</strong>
+          <p>Work with arrays and objects to store and manipulate data.</p>
+        </li>
+        <li>
+          <strong>Module 6: The Document Object Model (DOM)</strong>
+          <p>Manipulate the DOM to create dynamic web pages.</p>
+        </li>
+      </ol>
 
-            Conditional statements (if, else, switch)
-            Loops (for, while, do...while)
-            Functions and scope
-            Module 3: Working with Objects and Arrays
+      <h2>Assignments and Projects</h2>
+      <p>
+        Throughout the course, you will complete various assignments and projects to reinforce your learning. These will include coding exercises, quizzes, and a final project where you will build a small web application using JavaScript.
+      </p>
 
-            Understanding JavaScript objects
-            Array methods and manipulation
-            Introduction to the Document Object Model (DOM)
-            Module 4: Advanced Topics
+      <h2>Resources</h2>
+      <p>
+        You will have access to a variety of resources, including:
+      </p>
+      <ul>
+        <li>Online documentation and tutorials</li>
+        <li>Sample code and exercises</li>
+        <li>Discussion forums for peer support</li>
+      </ul>
 
-            Asynchronous JavaScript (Promises, async/await)
-            Error handling and debugging
-            Introduction to APIs and AJAX
-    
-            Weekly Schedule
-            Week 1:
-
-            Day 1: Introduction to JavaScript and Variables
-            Day 2: Control Structures
-            Day 3: Functions and Scope
-            Week 2:
-
-            Day 1: Objects and Arrays
-            Day 2: DOM Manipulation
-            Day 3: Event Handling
-            Resources
-            Lecture Notes: Download Lecture Notes
-            Activity Files:
-            Console Log Activity
-            Variable Declaration Activity
-            Additional Readings:
-            JavaScript Guide
-            JavaScript Reference
-            Assignments
-            Weekly Challenge: Create a personal blog application that dynamically renders blog posts and implements a light/dark mode toggle. View Assignment
-            Important Links
-            GitHub Copilot Guide: Access Guide
-            Node.js Installation Guide: Install Node.js
-            Contact
-            For any questions or support, please reach out to your instructor via the course forum or email.
-            </p>
-        </div>
-    );
-}
+      <h2>Contact Information</h2>
+      <p>
+        Instructor: [Instructor Name] <br />
+        Email: [Instructor Email] <br />
+        Office Hours: [Days and Times]
+      </p>
+    </div>
+  );
+};
 
 export default javascriptClass;

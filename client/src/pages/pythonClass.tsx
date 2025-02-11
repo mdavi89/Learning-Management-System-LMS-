@@ -1,69 +1,77 @@
 import React from 'react';
 
-const PythonClass: React.FC = () => {
+const pythonClass: React.FC = () => {
+  return (
+    <div>
+      <h1>Fundamentals of Python</h1>
+      <h2>Course Overview</h2>
+      <p>
+        Welcome to the "Fundamentals of Python" course! This course is designed for beginners who want to learn the basics of Python programming. Throughout this course, you will gain a solid understanding of Python concepts and how to apply them in real-world scenarios.
+      </p>
 
-    return (
-        <div>
-            <h1>Python Fundamentals Course</h1>
-            <br></br>
-            <p>
-            Welcome to the Python Fundamentals Course!
-            <br></br>
-            Course Overview
-            <br></br>
-            In this course, you will learn the essential concepts of Python, the programming language of the web. By the end of this course, you will be able to create dynamic, interactive web pages using Python.
-            <br></br>
-            Course Structure
-            Module 1: Introduction to Python
+      <h2>Course Objectives</h2>
+      <ul>
+        <li>Understand the core concepts of Python programming.</li>
+        <li>Write and debug Python code effectively.</li>
+        <li>Utilize data types, variables, and control structures.</li>
+        <li>Implement functions and modules for code organization.</li>
+        <li>Work with Python data structures such as lists, tuples, and dictionaries.</li>
+      </ul>
 
-            Overview of Python and its role in web development
-            Setting up your development environment
-            Understanding variables and data types
-            Module 2: Control Structures
+      <h2>Course Structure</h2>
+      <p>
+        The course is divided into several modules, each focusing on a specific topic. Here’s a brief outline of the course structure:
+      </p>
+      <ol>
+        <li>
+          <strong>Module 1: Introduction to Python</strong>
+          <p>Learn about Python, its history, and how to set up your development environment.</p>
+        </li>
+        <li>
+          <strong>Module 2: Variables and Data Types</strong>
+          <p>Understand variables, data types, and how to work with them in Python.</p>
+        </li>
+        <li>
+          <strong>Module 3: Control Structures</strong>
+          <p>Explore conditionals, loops, and how to control the flow of your code.</p>
+        </li>
+        <li>
+          <strong>Module 4: Functions and Modules</strong>
+          <p>Learn how to define and call functions, and understand the concept of modules.</p>
+        </li>
+        <li>
+          <strong>Module 5: Data Structures</strong>
+          <p>Work with lists, tuples, and dictionaries to store and manipulate data.</p>
+        </li>
+        <li>
+          <strong>Module 6: File Handling and Exception Handling</strong>
+          <p>Learn how to read from and write to files, and handle exceptions in Python.</p>
+        </li>
+      </ol>
 
-            Conditional statements (if, else, switch)
-            Loops (for, while, do...while)
-            Functions and scope
-            Module 3: Working with Objects and Arrays
+      <h2>Assignments and Projects</h2>
+      <p>
+        Throughout the course, you will complete various assignments and projects to reinforce your learning. These will include coding exercises, quizzes, and a final project where you will build a Python application.
+      </p>
 
-            Understanding Python objects
-            Array methods and manipulation
-            Introduction to the Document Object Model (DOM)
-            Module 4: Advanced Topics
+      <h2>Resources</h2>
+      <p>
+        You will have access to a variety of resources, including:
+      </p>
+      <ul>
+        <li>Online documentation and tutorials</li>
+        <li>Sample code and exercises</li>
+        <li>Discussion forums for peer support</li>
+      </ul>
 
-            Asynchronous Python (Promises, async/await)
-            Error handling and debugging
-            Introduction to APIs and AJAX
-    
-            Weekly Schedule
-            Week 1:
+      <h2>Contact Information</h2>
+      <p>
+        Instructor: [Instructor Name] <br />
+        Email: [Instructor Email] <br />
+        Office Hours: [Days and Times]
+      </p>
+    </div>
+  );
+};
 
-            Day 1: Introduction to Python and Variables
-            Day 2: Control Structures
-            Day 3: Functions and Scope
-            Week 2:
-
-            Day 1: Objects and Arrays
-            Day 2: DOM Manipulation
-            Day 3: Event Handling
-            Resources
-            Lecture Notes: Download Lecture Notes
-            Activity Files:
-            Console Log Activity
-            Variable Declaration Activity
-            Additional Readings:
-            Python Guide
-            Python Reference
-            Assignments
-            Weekly Challenge: Create a personal blog application that dynamically renders blog posts and implements a light/dark mode toggle. View Assignment
-            Important Links
-            GitHub Copilot Guide: Access Guide
-            Node.js Installation Guide: Install Node.js
-            Contact
-            For any questions or support, please reach out to your instructor via the course forum or email.
-            </p>
-        </div>
-    );
-}
-
-export default PythonClass;
+export default pythonClass;
