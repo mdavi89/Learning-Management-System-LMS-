@@ -89,10 +89,10 @@ const resolvers = {
     updateUser: async (_: any, { input }: { input: any }) => {
       try {
         // Remove the password field from the input object to prevent updating it
-        const { password, ...updateFields } = input;
+        const { password, originUsername, ...updateFields } = input;
     
         const updatedUser = await User.findOneAndUpdate(
-          { username: input.username },  // Find user by username
+          { username: originUsername },  // Find user by username
           { $set: updateFields },         // Only update fields excluding password
           { new: true, runValidators: true }
         );
