@@ -27,6 +27,7 @@ const Navbar = () => {
               </div>
               
             )}
+            </div>
           {/* If you are already loggedIn, just display user */}
           {Auth.loggedIn() ? (<div> 
             <p><br></br><br /> </p>           
