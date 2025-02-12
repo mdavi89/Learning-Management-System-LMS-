@@ -5,14 +5,17 @@ import Navbar from "./components/navbar"; // Import your Navbar component
 // Create simple components for each route
 import Dashboard from "./pages/dashboard";
 //const Courses = () => <h2>Courses Page</h2>;
-import JavascriptClass from "./pages/javascriptClass";
-import PythonClass from "./pages/pythonClass";
-import TypescriptClass from "./pages/typescriptClass";
+import JavascriptClass from "./pages/syllabus/javascriptClass";
+import PythonClass from "./pages/syllabus/pythonClass";
+import TypescriptClass from "./pages/syllabus/typescriptClass";
+import Lesson from "./pages/lesson";
+import PythonLesson from "./pages/lessons/Pythonlessons";
+import JavaScriptLesson from "./pages/lessons/JSlessons";
+import TypeScriptLesson from "./pages/lessons/TSlessons";
 import Login from "./pages/Login";
 import Syllabus from "./pages/syllabus";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
-const Lessons = () => <h2>Lessons Page</h2>;
 const Quizzes = () => <h2>Quizzes Page</h2>;
 const Tests = () => <h2>Tests Page</h2>;
 const Grades = () => <h2>Grades Page</h2>;
@@ -63,12 +66,17 @@ const App = () => {
         <div className="router-container">
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/javascriptClass" element={<JavascriptClass />} />
-          <Route path="/typescriptClass" element={<TypescriptClass />} />
-          <Route path="/pythonClass" element={<PythonClass />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/syllabus" element={<Syllabus />} />
-          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/syllabus" element={<Syllabus />}>
+            <Route path="javascript" element={<JavascriptClass />} />
+            <Route path="typescript" element={<TypescriptClass />} />
+            <Route path="python" element={<PythonClass />} />
+          </Route >
+          <Route path="/lessons" element={<Lesson />}>
+            <Route path="python" element={<PythonLesson />} />
+            <Route path="javascript" element={<JavaScriptLesson />} />
+            <Route path="typescript" element={<TypeScriptLesson />} />
+          </Route>
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/grades" element={<Grades />} />
