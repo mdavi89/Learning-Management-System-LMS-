@@ -26,6 +26,8 @@ const startApolloServer = async () => {
 
   const CLIENT_URL = process.env.VITE_CLIENT_URL
 
+  console.log(CLIENT_URL)
+
   app.use(cors({ origin: CLIENT_URL, credentials: true }));
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
