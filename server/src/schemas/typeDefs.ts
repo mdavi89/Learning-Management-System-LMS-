@@ -12,6 +12,13 @@ const typeDefs = `
     email: String!
     password: String!
   }
+
+  input UpdateUserInput {
+    originUsername: String!
+    username: String!
+    email: String!
+    password: String!
+  }
   
   type Auth {
     token: ID!
@@ -28,7 +35,7 @@ const typeDefs = `
     addUser(input: UserInput!): Auth
     login(email: String!, password: String!): Auth
     deleteUser(username: String!): User
-    updateUser(input : UserInput!) : User    
+    updateUser(input : UpdateUserInput!) : User    
   }
 `;
 

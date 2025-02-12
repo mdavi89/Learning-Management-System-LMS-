@@ -60,12 +60,13 @@ async function checkPassword() {
     e.preventDefault();
         if(true){
           const input = {
+            originUsername: getUser.data.me.username,
             username: userData.username,
             email: userData.email,
             password: userData.password,
           };
           updateUser({ variables: { input } });
-          alert("Account 1updated");
+          alert("Account updated");
           
         }
         else{
