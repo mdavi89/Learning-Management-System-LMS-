@@ -16,9 +16,9 @@ import Login from "./pages/Login";
 import Syllabus from "./pages/syllabus";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
-const Quizzes = () => <h2>Quizzes Page</h2>;
-const Tests = () => <h2>Tests Page</h2>;
-const Grades = () => <h2>Grades Page</h2>;
+import Quizzes from "./pages/Quizzes";
+import Tests from "./pages/Tests";
+import Grades from "./pages/Grades";
 
 import './App.css';
 import {
