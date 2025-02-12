@@ -33,7 +33,7 @@ import { setContext } from '@apollo/client/link/context';
 
 // Construct our main GraphQL API endpoint
 
-const SERVER_URI = import.meta.env.GRAPHQL_URI
+const SERVER_URI = import.meta.env.VITE_GRAPHQL_URI
 
 const httpLink = createHttpLink({
   uri: SERVER_URI,
