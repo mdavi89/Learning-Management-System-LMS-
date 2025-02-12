@@ -66,7 +66,7 @@ async function checkPassword() {
             password: userData.password,
           };
           updateUser({ variables: { input } });
-          alert("Account 1updated");
+          alert("Account updated");
           
         }
         else{
