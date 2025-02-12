@@ -34,7 +34,7 @@ import { setContext } from '@apollo/client/link/context';
 // Construct our main GraphQL API endpoint
 
 const httpLink = createHttpLink({
-  uri: 'https://learning-management-system-lms-server-j6sk.onrender.com/graphql',
+  uri: import.meta.GRAPHQL_URI,
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
