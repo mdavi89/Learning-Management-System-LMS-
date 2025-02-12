@@ -23,7 +23,6 @@ const Navbar = () => {
           (<div> <p><br></br><br /> </p> <Link to="/login">Log In</Link> </div>
           )}
         </div>
-      </div>
         {/* Wide Navbar */}
          {Auth.loggedIn() ? (<div className="navbar-wide">
           <Link to="/syllabus">Syllabus</Link>
